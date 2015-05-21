@@ -14,6 +14,16 @@ public class sortArray{
 				}
 			}
 		}
+		
+		for(int x = 0; x < 6; x++){
+			for(int i = 1; i <= 5-x; i++){
+				if(m[x+i][0] == m[x][0] && m[x+i][1] < m[x][1]){
+					int temp = m[x+i][1];
+					m[x+i][1] = m[x][1];
+					m[x][1] = temp;
+				}
+			}
+		}
 	
 		for(int x = 0; x < 6; x++){
 			for(int y = 0; y < 2; y++){
